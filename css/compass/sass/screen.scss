@@ -1,0 +1,136 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+//--------------------------------
+$color: #7CA6D2;
+
+$font-stack: Comic Sans MS, cursive;
+
+//main: #container  #mainmenu
+//addVideo: .wide_input
+//changeInfo: .wide_input
+//library: #library_item #library_header #library_image
+//watchVideo:
+
+body {
+    background: rgb(236, 238, 240);
+}
+#container {
+    /*background: $color1;*/
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+}
+
+#mainmenu {
+    /*background: $color6;*/
+
+    li {
+        display: inline-block;        
+    }
+
+    a {
+        font: 150% $font-stack;
+        padding: 10px;
+    }
+}
+.active {
+            background: $color;
+}
+
+.content {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.wide_input {
+    width: 80%;
+    margin: 8px;
+}
+
+.page_info{
+    font: 140% $font-stack;
+    padding-bottom: 10px;
+    color: $color;
+}
+
+h1 {
+    font: 250% $font-stack;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: $color;
+    border-radius: 7px;
+    color: white;
+    display: inline-block;
+}
+
+p {
+  padding: 10px;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  font: 100% $font-stack;
+}
+
+p::before { 
+     content: "About this video: ";
+     font: 120% $font-stack;
+     display: block;
+     color: $color;
+ }
+
+#library_item {
+    /*background: $color4;*/
+    width: 31.5%;
+    height: 230px;
+    overflow: hidden;
+    float: left;
+    margin: auto;
+    margin: 0.5%;
+    border: 2px solid $color;
+    border-radius: 5px;
+} 
+
+#library_header {
+    height: 60px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    font: 100% $font-stack;
+}
+
+#library_image {
+    height: 200px;
+}
+
+iframe {
+    width: 480px;
+    height: 360px;
+}
+
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
+
+    #container {
+        width: 95%;
+    }
+    #library_item {
+        width: 90%;
+        overflow: hidden;
+        float: none;
+        margin: auto;
+        margin-bottom: 3%;
+    } 
+    iframe {
+        width: 270px;
+        height: 180px;
+    }
+    
+}   
+
