@@ -41,7 +41,7 @@ class VideoLibrary extends CActiveRecord
 
 
     /**
-     * Get particular info from bbig json info pack
+     * Get particular info from big json info pack
      *@param string $video_id
      *@param string $info (title, description..) 
      *@return string particular info
@@ -83,6 +83,13 @@ class VideoLibrary extends CActiveRecord
         $Library->description = htmlspecialchars($description);
         $Library->image = $image;
         $Library->save();
+    }
+
+
+
+    public static function xml_output($video_url, $title, $description, $image) 
+    {
+
     }
 }
 ?>

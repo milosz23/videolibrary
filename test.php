@@ -1,6 +1,6 @@
 <?php
 $title = 'titlemana';
-$description = "descripta mana";
+$description = $_POST["fname"];
 
 $string = <<<XML
 <wrap>
